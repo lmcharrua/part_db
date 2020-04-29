@@ -1,0 +1,69 @@
+{
+  "name": "part-db/server",
+  "description": "Part-DB is a tool for managment of electronic parts.",
+  "version": "0.6.0",
+  "type": "project",
+  "keywords": ["database", "electronic", "application"],
+  "homepage": "https://github.com/jbtronics/Part-DB",
+  "support": {
+    "issues": "https://github.com/jbtronics/Part-DB/issues",
+    "forum": "https://www.mikrocontroller.net/topic/305023",
+    "wiki": "https://github.com/jbtronics/Part-DB/wiki"
+  },
+  "license": "GPL-2.0+",
+
+  "require": {
+    "php": ">=7.0",
+    "ext-mbstring": "*",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-gettext": "*",
+    "ext-json": "*",
+    "golonka/bbcodeparser": "dev-master",
+    "smarty/smarty": "~3.1",
+    "smarty-gettext/smarty-gettext": "~1.5.1",
+    "tecnickcom/tcpdf": "dev-master",
+    "slim/slim": "3.*",
+    "ircmaxell/password-compat": "1.*",
+    "snapappointments/bootstrap-select": "1.*",
+    "components/jquery": "3.3.*",
+    "kartik-v/bootstrap-fileinput": "4.*",
+    "jquery-form/form": "4.*",
+    "nnnick/chartjs": "2.7.*",
+    "geertw/ip-anonymizer" : "1.*",
+    "ext-iconv": "*"
+  },
+
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*",
+    "filp/whoops": "*",
+	"maximebf/debugbar": "1.*"
+  },
+
+  "suggest": {
+    "phpunit/phpunit": "Needed for unittests in development.",
+    "ext-intl": "Needed for localized datetime formatting.",
+    "ext-curl": "Needed for better downloads.",
+    "ext-libxml": "Needed for XML import/export",
+    "ext-dom": "Needed for import/export",
+    "ext-fileinfo": "Needed for mime type determination",
+    "ext-iconv": "Needed for money string localization",
+    "ext-simplexml": "Needed for Update panels"
+
+  },
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@github.com:Part-DB/Part-DB_tcpdf.git"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@github.com:jbtronics/GolonkaBBCodeParser.git"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {"PartDB\\": "lib/"}
+  }
+}
